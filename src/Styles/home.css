@@ -1,0 +1,11 @@
+.home_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+  flex-direction: column;
+}
+.quiz_icon {
+  width: 90vw;
+  max-height: 300px;
+}

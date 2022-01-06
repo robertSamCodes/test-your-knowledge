@@ -1,10 +1,12 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import quizIcon from "../Assets/quizIcon.svg";
 import "../Styles/home.css";
 const Home = () => {
   const [userInput, setUserInput] = useState("");
   const [disableButton, setDisableButton] = useState(true);
+  const navigate = useNavigate();
 
   const handleButtonDisabling = () =>
     userInput.length ? setDisableButton(false) : setDisableButton(true);
@@ -47,8 +49,9 @@ const Home = () => {
         <Button
           variant="contained"
           disabled={disableButton}
-          style={{ backgroundColor: "#5957c8" }}
+          onClick={() => navigate("/question")}
         >
+          {/* style={{ backgroundColor: "#5957c8" }} */}
           Start Quiz
         </Button>
       </Box>

@@ -1,10 +1,15 @@
+import { Box } from "@mui/material";
 import React from "react";
+import QuestionContainer from "../Components/QuestionContainer";
+import QuestionNumber from "../Components/QuestionNumber";
+import "../Styles/question.css";
 
 const Question = () => {
   return (
-    <div>
-      <h1>Questions page</h1>
-    </div>
+    <Box className="question_container">
+      <QuestionNumber />
+      <QuestionContainer />
+    </Box>
   );
 };
 

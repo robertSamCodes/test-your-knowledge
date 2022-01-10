@@ -1,6 +1,7 @@
 import Home from "./Pages/Home";
 import Question from "./Pages/Question";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./Styles/index.css";
 
 function App() {
   return (

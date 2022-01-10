@@ -25,8 +25,9 @@
 
 .next_btn {
   position: relative;
-  bottom: -72px;
+  bottom: -10px;
   right: -250px;
+  cursor: pointer;
   width: 90px;
   color: white;
   font-weight: bold;
@@ -35,4 +36,8 @@
   padding: 10px;
   border: none;
   border-bottom-right-radius: 30px;
+}
+
+.next_btn:hover {
+  background-color: #e4a33b;
 }

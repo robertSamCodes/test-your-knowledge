@@ -1,0 +1,28 @@
+.results_container {
+  background-color: #5957c8;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+.upper_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  background-color: white;
+  color: #f3ae42;
+  /* font-size: 35px; */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.progressbar {
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  text-align: center;
+  /* background-color: #f3ae42; */
+}

@@ -1,11 +1,21 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import {
+  Box,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import quizIcon from "../Assets/quizIcon.svg";
 import "../Styles/home.css";
 const Home = () => {
   const [userInput, setUserInput] = useState("");
   const [disableButton, setDisableButton] = useState(true);
+  const [category, setCategory] = useState("");
   const navigate = useNavigate();
 
   const handleButtonDisabling = () =>
@@ -27,7 +37,7 @@ const Home = () => {
       <Typography
         mt={2}
         textAlign="center"
-        mb={4}
+        // padding={2}
         variant="h6"
         color="darkgray"
       >
@@ -35,16 +45,37 @@ const Home = () => {
         study areas.
       </Typography>
       <TextField
+        className="userInputField"
         variant="standard"
         placeholder="Username here"
         label="Enter your username"
         autoComplete="true"
+        style={{ width: 350 }}
         autoFocus={true}
         spellCheck={"true"}
         value={userInput}
         onChange={(e) => setUserInput(e.target.value)}
         onKeyDown={handleButtonDisabling}
       />
+      <Box sx={{ minWidth: 350 }} mt={2}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">Category</InputLabel>
+          <Select
+            s // style={{ width: "350px" }}
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={category}
+            label="Category"
+            onChange={(event) => setCategory(event.target.value)}
+          >
+            <MenuItem value={"History"}>History</MenuItem>
+            <MenuItem value={"Sports"}>Sports</MenuItem>
+            <MenuItem value={"Entertainment"}>Entertainment</MenuItem>
+            <MenuItem value={"Celebrities"}>Celebrities</MenuItem>
+            <MenuItem value={"Geography"}>Geography</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
       <Box mt={2}>
         <Button
           variant="contained"
